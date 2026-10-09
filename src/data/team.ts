@@ -32,7 +32,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
       "Worked with Google Developers Group & Techstars",
     ],
     portfolioSource: "https://narottamvisuals.in",
-    avatarUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+    avatarUrl: "/team/narottam-sharan.png",
     featuredProjectsCount: 12,
   },
   {
@@ -62,7 +62,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
       "Co-founded media production workflows",
     ],
     portfolioSource: "https://adityakumarray.vercel.app",
-    avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+    avatarUrl: "/team/aditya-kumar-ray.jpg",
     featuredProjectsCount: 5,
   },
   {
@@ -91,7 +91,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
       "2+ years crafting viral cinematic retention",
     ],
     portfolioSource: "https://prashantkits.vercel.app",
-    avatarUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+    avatarUrl: "/team/prashant-singh.png",
     featuredProjectsCount: 9,
   },
 ];

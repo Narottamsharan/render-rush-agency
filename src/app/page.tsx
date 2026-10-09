@@ -17,12 +17,13 @@ import {
   Zap,
 } from "lucide-react";
 import HeroShowreel from "@/components/HeroShowreel";
+import BrandsSection from "@/components/BrandsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import VideoCard from "@/components/VideoCard";
 import VideoModal from "@/components/VideoModal";
 import { PROJECTS, Project } from "@/data/projects";
 import { TEAM_MEMBERS } from "@/data/team";
 import { SERVICES } from "@/data/services";
-import { siteConfig } from "@/config/site";
 
 export default function HomePage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -39,10 +40,13 @@ export default function HomePage() {
 
   return (
     <div className="space-y-24 md:space-y-36 pb-20">
-      {/* 1. HERO SHOWREEL */}
+      {/* 1. HERO & FEATURED VIDEO (With React Bits DarkVeil Background) */}
       <HeroShowreel />
 
-      {/* 2. SELECTED WORK SHOWCASE */}
+      {/* 2. BRANDS OUR TEAM HAS WORKED WITH */}
+      <BrandsSection />
+
+      {/* 3. SELECTED WORK SHOWCASE */}
       <section className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
@@ -88,7 +92,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. AGENCY SERVICES */}
+      {/* 4. AGENCY SERVICES */}
       <section className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="text-xs font-bold text-[#D96846] tracking-widest uppercase">
@@ -162,7 +166,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. WHY RENDER RUSH */}
+      {/* 5. WHY RENDER RUSH */}
       <section className="bg-[#121217] border-y border-[#1F1F28] py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -232,7 +236,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. 4-STEP PRODUCTION PROCESS */}
+      {/* 6. 4-STEP PRODUCTION PROCESS */}
       <section className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="text-xs font-bold text-[#D96846] tracking-widest uppercase">
@@ -281,7 +285,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. MEET THE TEAM */}
+      {/* 7. MEET THE TEAM (REAL PHOTOS) */}
       <section className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
@@ -369,7 +373,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. PRODUCTION STANDARDS & CLIENT COMMITMENT */}
+      {/* 8. TESTIMONIALS (GENUINE QUOTES & ATTRIBUTION) */}
+      <TestimonialsSection />
+
+      {/* 9. PRODUCTION STANDARDS & CLIENT COMMITMENT */}
       <section className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="p-8 sm:p-12 md:p-16 rounded-3xl bg-gradient-to-b from-[#181822] to-[#121217] border border-[#2B2B38] space-y-8">
           <div className="max-w-3xl space-y-3">
@@ -404,7 +411,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. FINAL CALL TO ACTION */}
+      {/* 10. FINAL CALL TO ACTION */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 text-center">
         <div className="p-12 md:p-20 rounded-3xl bg-[#141419] border border-[#2B2B38] relative overflow-hidden space-y-8">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#D96846]/10 rounded-full blur-[120px] pointer-events-none" />
@@ -430,7 +437,7 @@ export default function HomePage() {
               <ArrowUpRight className="w-5 h-5" />
             </Link>
             <a
-              href={siteConfig.contact.whatsappUrl}
+              href="https://wa.me/916263340830"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-[#323242] hover:border-[#D96846] text-[#F5F2ED] font-semibold text-base px-8 py-4 rounded-full transition-colors active:scale-95"
