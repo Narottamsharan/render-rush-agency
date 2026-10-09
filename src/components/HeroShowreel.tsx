@@ -31,19 +31,21 @@ export default function HeroShowreel() {
         {/* REACT BITS ANIMATED HERO BACKGROUND (Sits strictly behind text, non-interactive) */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
           {/* WebGL Canvas Shader */}
-          <div className="absolute inset-0 opacity-40 mix-blend-screen">
+          <div className="absolute inset-0">
             <DarkVeil
-              hueShift={28}
-              speed={0.3}
-              warpAmount={0.12}
-              resolutionScale={0.8}
+              hueShift={216}
+              noiseIntensity={0}
+              scanlineIntensity={0}
+              speed={0.5}
+              scanlineFrequency={0}
+              warpAmount={0}
+              resolutionScale={1}
             />
           </div>
 
-          {/* Radial & Vignette contrast masks for text readability */}
-          <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#0D0D10]/70 to-[#0D0D10]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D10]/80 via-transparent to-[#0D0D10]" />
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#D96846]/10 rounded-full blur-[140px]" />
+          {/* Subtle contrast masks for text readability */}
+          <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#0D0D10]/40 to-[#0D0D10]/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D10]/70 via-transparent to-[#0D0D10]" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">

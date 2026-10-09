@@ -70,8 +70,8 @@ export default function HomePage() {
           </Link>
         </div>
 
-        {/* Responsive Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {/* Responsive Grid - Content-sized cards with top alignment */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-start">
           {featuredProjects.map((project) => (
             <VideoCard
               key={project.id}

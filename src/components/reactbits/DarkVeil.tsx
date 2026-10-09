@@ -98,13 +98,13 @@ interface DarkVeilProps {
 }
 
 export default function DarkVeil({
-  hueShift = 28, // Calibrated for deep warm burnt-orange / terracotta hues
-  noiseIntensity = 0.015,
+  hueShift = 216, // Official user-specified reference: hueShift 216
+  noiseIntensity = 0,
   scanlineIntensity = 0,
-  speed = 0.35,
+  speed = 0.5,
   scanlineFrequency = 0,
-  warpAmount = 0.15,
-  resolutionScale = 0.85,
+  warpAmount = 0,
+  resolutionScale = 1,
   lightMode = false,
 }: DarkVeilProps) {
   const ref = useRef<HTMLCanvasElement | null>(null);
@@ -127,7 +127,7 @@ export default function DarkVeil({
     let renderer: Renderer;
     try {
       renderer = new Renderer({
-        dpr: Math.min(window.devicePixelRatio, 1.5),
+        dpr: Math.min(window.devicePixelRatio, 2),
         canvas,
         alpha: true,
         antialias: false,
@@ -162,10 +162,16 @@ export default function DarkVeil({
       if (!parent) return;
       const w = parent.clientWidth;
       const h = parent.clientHeight;
-      if (w === 0 || h === 0) return;
+      if (w <= 0 || h <= 0) return;
       renderer.setSize(w * resolutionScale, h * resolutionScale);
-      program.uniforms.uResolution.value.set(w, h);
+      program.uniforms.uResolution.value.set(gl.canvas.width, gl.canvas.height);
     };
+
+    // Watch parent dimensions dynamically for full responsive coverage
+    const resizeObserver = new ResizeObserver(() => {
+      resize();
+    });
+    resizeObserver.observe(parent);
 
     window.addEventListener("resize", resize);
     resize();
@@ -200,6 +206,7 @@ export default function DarkVeil({
     return () => {
       cancelAnimationFrame(frame);
       observer.disconnect();
+      resizeObserver.disconnect();
       window.removeEventListener("resize", resize);
     };
   }, [
@@ -215,9 +222,14 @@ export default function DarkVeil({
 
   if (prefersReducedMotion || !webglSupported) {
     return (
-      <div className="absolute inset-0 bg-gradient-to-b from-[#161318] via-[#0D0D10] to-[#0D0D10] opacity-80 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#141218] via-[#0D0D10] to-[#0D0D10] opacity-80 pointer-events-none" />
     );
   }
 
-  return <canvas ref={ref} className="darkveil-canvas" />;
+  return (
+    <canvas
+      ref={ref}
+      className="darkveil-canvas absolute inset-0 w-full h-full block pointer-events-none"
+    />
+  );
 }

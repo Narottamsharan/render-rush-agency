@@ -22,7 +22,7 @@ export default function VideoCard({ project, onSelect }: VideoCardProps) {
   return (
     <div
       onClick={() => onSelect(project)}
-      className="group relative cursor-pointer flex flex-col bg-[#141419] border border-[#242430] hover:border-[#D96846]/60 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#D96846]/10 hover:-translate-y-1"
+      className="group relative cursor-pointer flex flex-col h-fit self-start w-full bg-[#141419] border border-[#242430] hover:border-[#D96846]/60 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#D96846]/10 hover:-translate-y-1"
     >
       {/* Thumbnail Frame */}
       <div
@@ -73,13 +73,13 @@ export default function VideoCard({ project, onSelect }: VideoCardProps) {
         </div>
       </div>
 
-      {/* Info Card Content */}
-      <div className="p-5 flex flex-col flex-1 justify-between gap-4">
+      {/* Info Card Content - Content-sized, naturally terminating */}
+      <div className="p-5 flex flex-col gap-3.5">
         <div>
           <h3 className="text-base font-bold text-[#F5F2ED] group-hover:text-[#D96846] transition-colors line-clamp-2 leading-snug">
             {project.title}
           </h3>
-          <p className="mt-2 text-xs text-[#82818A] line-clamp-2 leading-relaxed">
+          <p className="mt-1.5 text-xs text-[#82818A] line-clamp-2 leading-relaxed">
             {project.description}
           </p>
         </div>
