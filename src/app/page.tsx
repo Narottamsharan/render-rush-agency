@@ -377,8 +377,8 @@ export default function HomePage() {
       <TestimonialsSection />
 
       {/* 9. PRODUCTION STANDARDS & CLIENT COMMITMENT */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="p-8 sm:p-12 md:p-16 rounded-3xl bg-gradient-to-b from-[#181822] to-[#121217] border border-[#2B2B38] space-y-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+        <div className="p-6 sm:p-10 md:p-16 rounded-3xl bg-gradient-to-b from-[#181822] to-[#121217] border border-[#2B2B38] space-y-6 sm:space-y-8">
           <div className="max-w-3xl space-y-3">
             <span className="text-xs font-bold text-[#D96846] tracking-widest uppercase">
               Production Standards
@@ -386,7 +386,7 @@ export default function HomePage() {
             <h3 className="text-2xl sm:text-4xl font-black uppercase text-[#F5F2ED]">
               What You Can Expect When Partnering With Us
             </h3>
-            <p className="text-sm text-[#82818A] leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#82818A] leading-relaxed">
               We operate as your dedicated post-production engine. No generic stock templates, no unapproved revisions, and zero compromise on audio or color quality.
             </p>
           </div>
@@ -412,26 +412,26 @@ export default function HomePage() {
       </section>
 
       {/* 10. FINAL CALL TO ACTION */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-        <div className="p-12 md:p-20 rounded-3xl bg-[#141419] border border-[#2B2B38] relative overflow-hidden space-y-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 text-center">
+        <div className="p-6 sm:p-12 md:p-20 rounded-3xl bg-[#141419] border border-[#2B2B38] relative overflow-hidden space-y-6 sm:space-y-8">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#D96846]/10 rounded-full blur-[120px] pointer-events-none" />
 
-          <div className="relative z-10 max-w-3xl mx-auto space-y-4">
+          <div className="relative z-10 max-w-3xl mx-auto space-y-3 sm:space-y-4">
             <span className="text-xs font-bold text-[#D96846] tracking-widest uppercase">
               Ready to Elevate Your Media?
             </span>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-[#F5F2ED] leading-none">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#F5F2ED] leading-tight break-words">
               LET&apos;S MAKE SOMETHING WORTH WATCHING.
             </h2>
-            <p className="text-sm sm:text-base text-[#82818A] max-w-xl mx-auto">
+            <p className="text-xs sm:text-base text-[#82818A] max-w-xl mx-auto px-2">
               Share your project goals, raw footage details, or upcoming launch plans. We&apos;ll prepare a customized quote and production schedule.
             </p>
           </div>
 
-          <div className="relative z-10 flex flex-wrap items-center justify-center gap-4 pt-4">
+          <div className="relative z-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 sm:gap-4 pt-2 max-w-md sm:max-w-none mx-auto">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#D96846] hover:bg-[#E87A58] text-[#0D0D10] font-bold text-base px-8 py-4 rounded-full transition-all duration-200 hover:shadow-xl hover:shadow-[#D96846]/25 active:scale-95"
+              className="inline-flex items-center justify-center gap-2 bg-[#D96846] hover:bg-[#E87A58] text-[#0D0D10] font-bold text-sm sm:text-base px-8 py-3.5 sm:py-4 rounded-full transition-all duration-200 hover:shadow-xl hover:shadow-[#D96846]/25 active:scale-95 min-h-[48px]"
             >
               <span>Start a Project</span>
               <ArrowUpRight className="w-5 h-5" />
@@ -440,7 +440,7 @@ export default function HomePage() {
               href="https://wa.me/916263340830"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-[#323242] hover:border-[#D96846] text-[#F5F2ED] font-semibold text-base px-8 py-4 rounded-full transition-colors active:scale-95"
+              className="inline-flex items-center justify-center gap-2 border border-[#323242] hover:border-[#D96846] text-[#F5F2ED] font-semibold text-sm sm:text-base px-8 py-3.5 sm:py-4 rounded-full transition-colors active:scale-95 min-h-[48px]"
             >
               <span>Chat on WhatsApp</span>
             </a>

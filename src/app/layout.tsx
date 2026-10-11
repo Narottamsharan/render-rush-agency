@@ -14,10 +14,11 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL("https://renderrush.in"),
   title: {
-    default: "RENDER RUSH | Premium Creative Agency — We Create. You Grow.",
-    template: "%s | RENDER RUSH",
+    default: "Render Rush | Premium Creative Agency",
+    template: "%s | Render Rush",
   },
-  description: siteConfig.description,
+  description:
+    "Render Rush is a creative agency offering professional video editing, graphic design, social media management, and digital content solutions for brands and creators.",
   keywords: [
     "Render Rush",
     "Creative Agency",
@@ -29,9 +30,17 @@ export const metadata: Metadata = {
     "Brand Storytelling",
   ],
   authors: [{ name: "Render Rush Creative Team" }],
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
   openGraph: {
-    title: "RENDER RUSH | Creative Agency — We Create. You Grow.",
-    description: siteConfig.description,
+    title: "Render Rush | Premium Creative Agency",
+    description:
+      "Render Rush is a creative agency offering professional video editing, graphic design, social media management, and digital content solutions for brands and creators.",
     url: "https://renderrush.in",
     siteName: "Render Rush",
     locale: "en_US",
@@ -39,8 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "RENDER RUSH | Creative Agency",
-    description: siteConfig.description,
+    title: "Render Rush | Premium Creative Agency",
+    description:
+      "Render Rush is a creative agency offering professional video editing, graphic design, social media management, and digital content solutions for brands and creators.",
   },
   robots: {
     index: true,

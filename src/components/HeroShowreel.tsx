@@ -48,16 +48,16 @@ export default function HeroShowreel() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D10]/70 via-transparent to-[#0D0D10]" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-6 sm:space-y-8">
             {/* Agency Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1A1A22]/90 backdrop-blur-md border border-[#2B2B38] text-xs font-semibold text-[#F5F2ED] tracking-wide">
-              <Sparkles className="w-3.5 h-3.5 text-[#D96846]" />
-              <span>Full-Stack Creative Agency & Post-Production Studio</span>
+            <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-[#1A1A22]/90 backdrop-blur-md border border-[#2B2B38] text-[11px] sm:text-xs font-semibold text-[#F5F2ED] tracking-wide max-w-full">
+              <Sparkles className="w-3.5 h-3.5 text-[#D96846] flex-shrink-0" />
+              <span className="truncate">Full-Stack Creative Agency & Post-Production</span>
             </div>
 
             {/* Master Headline */}
-            <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tighter uppercase text-[#F5F2ED] leading-[0.95]">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter uppercase text-[#F5F2ED] leading-[0.95] max-w-full break-words">
               WE CREATE.
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D96846] via-[#E87A58] to-[#F5F2ED]">
@@ -66,22 +66,22 @@ export default function HeroShowreel() {
             </h1>
 
             {/* Supporting Copy */}
-            <p className="text-base sm:text-xl text-[#82818A] max-w-2xl font-normal leading-relaxed">
+            <p className="text-sm sm:text-lg md:text-xl text-[#82818A] max-w-2xl font-normal leading-relaxed px-2">
               Premium video editing, thoughtful design, and digital content that makes brands stand out.
             </p>
 
             {/* Primary Action Buttons */}
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 sm:gap-4 pt-2 w-full sm:w-auto px-4 sm:px-0">
               <Link
                 href="/work"
-                className="inline-flex items-center gap-2 bg-[#D96846] hover:bg-[#E87A58] text-[#0D0D10] font-bold text-base px-8 py-4 rounded-full transition-all duration-200 hover:shadow-xl hover:shadow-[#D96846]/25 active:scale-95"
+                className="inline-flex items-center justify-center gap-2 bg-[#D96846] hover:bg-[#E87A58] text-[#0D0D10] font-bold text-sm sm:text-base px-7 sm:px-8 py-3.5 sm:py-4 rounded-full transition-all duration-200 hover:shadow-xl hover:shadow-[#D96846]/25 active:scale-95"
               >
                 <span>Explore Our Work</span>
-                <ArrowUpRight className="w-5 h-5" />
+                <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-[#141419]/90 hover:bg-[#1A1A22] border border-[#2B2B38] hover:border-[#D96846] text-[#F5F2ED] font-semibold text-base px-8 py-4 rounded-full transition-all duration-200 active:scale-95"
+                className="inline-flex items-center justify-center gap-2 bg-[#141419]/90 hover:bg-[#1A1A22] border border-[#2B2B38] hover:border-[#D96846] text-[#F5F2ED] font-semibold text-sm sm:text-base px-7 sm:px-8 py-3.5 sm:py-4 rounded-full transition-all duration-200 active:scale-95"
               >
                 <span>Start a Project</span>
               </Link>

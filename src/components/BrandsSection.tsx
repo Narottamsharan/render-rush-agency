@@ -12,7 +12,7 @@ export default function BrandsSection() {
       {/* Background glow accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[250px] bg-[#D96846]/5 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 space-y-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10 space-y-10 sm:space-y-12">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 text-xs font-bold text-[#D96846] tracking-widest uppercase">
@@ -22,17 +22,17 @@ export default function BrandsSection() {
           <h2 className="text-2xl sm:text-4xl font-black uppercase tracking-tight text-[#F5F2ED]">
             BRANDS OUR TEAM HAS WORKED WITH
           </h2>
-          <p className="text-xs sm:text-sm text-[#82818A] max-w-xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#82818A] max-w-xl mx-auto leading-relaxed px-2">
             Creative experience across brands, communities and content platforms. Experience reflects our collective work history across individual productions, prior engagements, and client campaigns.
           </p>
         </div>
 
         {/* Brand Showcase Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 md:gap-6">
           {featuredBrands.map((brand) => (
             <div
               key={brand.id}
-              className="group p-6 rounded-2xl bg-[#141419]/90 border border-[#242430] hover:border-[#D96846]/60 transition-all duration-300 flex flex-col justify-between space-y-4 hover:shadow-xl hover:shadow-[#D96846]/5"
+              className="group p-4 sm:p-6 rounded-2xl bg-[#141419]/90 border border-[#242430] hover:border-[#D96846]/60 transition-all duration-300 flex flex-col justify-between space-y-3 sm:space-y-4 hover:shadow-xl hover:shadow-[#D96846]/5"
             >
               <div className="space-y-1.5">
                 <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#1C1C26] text-[#82818A] uppercase tracking-wider">

@@ -47,14 +47,14 @@ function WorkContent() {
   });
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16 space-y-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-10 sm:py-16 space-y-10 sm:space-y-12">
       {/* Header */}
       <div className="space-y-4 max-w-3xl">
         <div className="inline-flex items-center gap-2 text-xs font-bold text-[#D96846] tracking-widest uppercase">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Production Portfolio</span>
         </div>
-        <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-[#F5F2ED]">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-[#F5F2ED]">
           Our Creative Work
         </h1>
         <p className="text-sm sm:text-base text-[#82818A] leading-relaxed">
@@ -65,19 +65,19 @@ function WorkContent() {
       {/* Filter and Search Bar */}
       <div className="space-y-6 pt-4 border-t border-[#20202A]">
         {/* Search Input */}
-        <div className="relative max-w-md">
+        <div className="relative max-w-md w-full">
           <Search className="w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2 text-[#82818A]" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search by title, editor, client or tag..."
-            className="w-full pl-11 pr-4 py-3 rounded-full bg-[#141419] border border-[#2B2B38] text-sm text-[#F5F2ED] placeholder-[#82818A] focus:outline-none focus:border-[#D96846] transition-colors"
+            className="w-full pl-11 pr-4 py-3 rounded-full bg-[#141419] border border-[#2B2B38] text-sm text-[#F5F2ED] placeholder-[#82818A] focus:outline-none focus:border-[#D96846] transition-colors min-h-[44px]"
           />
         </div>
 
-        {/* Category Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+        {/* Category Pills (Edge-to-edge horizontal swipe on mobile) */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
           <div className="flex items-center gap-1.5 text-xs text-[#82818A] mr-2">
             <Filter className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Filter:</span>

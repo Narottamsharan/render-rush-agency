@@ -6,10 +6,10 @@ import { siteConfig } from "@/config/site";
 export default function Footer() {
   return (
     <footer className="bg-[#0A0A0D] border-t border-[#1F1F28] pt-16 pb-12 text-[#82818A]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 sm:mb-16">
           {/* Brand Info */}
-          <div className="md:col-span-2 space-y-4">
+          <div className="sm:col-span-2 space-y-4">
             <Link
               href="/"
               className="inline-block text-2xl font-extrabold tracking-wider text-[#F5F2ED] uppercase"
@@ -23,22 +23,22 @@ export default function Footer() {
             <p className="text-sm max-w-md leading-relaxed text-[#82818A]">
               A premium creative team helping ambitious brands, creators, and businesses scale through high-retention video editing, cinematic visual storytelling, and distinct digital presence.
             </p>
-            <div className="pt-2 flex flex-wrap gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <a
                 href={siteConfig.contact.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-full border border-[#272733] text-[#F5F2ED] hover:border-[#D96846] hover:text-[#D96846] transition-colors"
+                className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-full border border-[#272733] text-[#F5F2ED] hover:border-[#D96846] hover:text-[#D96846] transition-colors min-h-[40px]"
               >
-                <MessageSquare className="w-3.5 h-3.5" />
+                <MessageSquare className="w-3.5 h-3.5 text-[#D96846]" />
                 <span>WhatsApp: {siteConfig.contact.phone}</span>
               </a>
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-full border border-[#272733] text-[#F5F2ED] hover:border-[#D96846] hover:text-[#D96846] transition-colors"
+                className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-full border border-[#272733] text-[#F5F2ED] hover:border-[#D96846] hover:text-[#D96846] transition-colors min-h-[40px] break-all"
               >
-                <Mail className="w-3.5 h-3.5" />
-                <span>{siteConfig.contact.email}</span>
+                <Mail className="w-3.5 h-3.5 text-[#D96846] flex-shrink-0" />
+                <span className="break-all">{siteConfig.contact.email}</span>
               </a>
             </div>
           </div>

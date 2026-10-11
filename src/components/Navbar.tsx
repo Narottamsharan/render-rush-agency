@@ -32,11 +32,12 @@ export default function Navbar() {
           : "bg-transparent py-6 border-b border-white/[0.04]"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between">
         {/* Brand Wordmark */}
         <Link
           href="/"
-          className="group flex items-center gap-2 text-xl md:text-2xl font-extrabold tracking-wider text-[#F5F2ED] uppercase transition-colors"
+          onClick={() => setIsOpen(false)}
+          className="group flex items-center gap-1.5 sm:gap-2 text-lg sm:text-xl md:text-2xl font-extrabold tracking-wider text-[#F5F2ED] uppercase transition-colors"
         >
           <span>RENDER</span>
           <span className="text-[#D96846] transition-transform duration-300 group-hover:translate-x-0.5">
@@ -45,7 +46,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-5 lg:gap-8 text-sm font-medium">
           {siteConfig.navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -71,7 +72,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#D96846] hover:bg-[#E87A58] text-[#0D0D10] font-semibold text-sm px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-[#D96846]/20 active:scale-95"
+            className="inline-flex items-center gap-2 bg-[#D96846] hover:bg-[#E87A58] text-[#0D0D10] font-bold text-xs lg:text-sm px-4 lg:px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-[#D96846]/20 active:scale-95"
           >
             <span>Start a Project</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -82,7 +83,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-[#F5F2ED] hover:text-[#D96846] focus:outline-none transition-colors"
+          className="md:hidden p-2 text-[#F5F2ED] hover:text-[#D96846] focus:outline-none transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg"
           aria-label="Toggle Navigation Menu"
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -91,15 +92,16 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {isOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[73px] bg-[#0D0D10]/98 backdrop-blur-xl border-b border-[#242430] p-6 shadow-2xl animate-in slide-in-from-top-4 duration-200">
-          <nav className="flex flex-col gap-4 text-base font-medium">
+        <div className="md:hidden fixed inset-x-0 top-full bg-[#0D0D10]/98 backdrop-blur-xl border-b border-[#242430] p-6 shadow-2xl animate-in slide-in-from-top-4 duration-200">
+          <nav className="flex flex-col gap-3 text-base font-medium">
             {siteConfig.navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`py-2 px-3 rounded-lg transition-colors ${
+                  onClick={() => setIsOpen(false)}
+                  className={`py-3 px-4 rounded-xl transition-colors min-h-[44px] flex items-center ${
                     isActive
                       ? "bg-[#1A1A22] text-[#D96846] font-semibold"
                       : "text-[#82818A] hover:text-[#F5F2ED] hover:bg-white/[0.03]"
@@ -112,7 +114,8 @@ export default function Navbar() {
             <div className="pt-4 border-t border-[#242430] flex flex-col gap-3">
               <Link
                 href="/contact"
-                className="flex items-center justify-center gap-2 bg-[#D96846] text-[#0D0D10] font-bold text-center py-3 rounded-xl transition-transform active:scale-95"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center justify-center gap-2 bg-[#D96846] text-[#0D0D10] font-bold text-center py-3.5 rounded-xl transition-transform active:scale-95 min-h-[44px]"
               >
                 <span>Start a Project</span>
                 <ArrowUpRight className="w-4 h-4" />
@@ -121,7 +124,7 @@ export default function Navbar() {
                 href={siteConfig.contact.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 border border-[#323242] text-[#F5F2ED] text-sm py-2.5 rounded-xl hover:border-[#D96846] transition-colors"
+                className="flex items-center justify-center gap-2 border border-[#323242] text-[#F5F2ED] text-sm py-3 rounded-xl hover:border-[#D96846] transition-colors min-h-[44px]"
               >
                 <span>WhatsApp: {siteConfig.contact.phone}</span>
               </a>

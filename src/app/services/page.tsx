@@ -15,7 +15,7 @@ import {
 import { SERVICES } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Agency Services",
+  title: "Creative Services",
   description:
     "Explore Render Rush creative services: Video Editing & Production, Graphic Design & Branding, Social Media Management, and Digital Marketing.",
 };
@@ -29,28 +29,28 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20 space-y-24">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:py-20 space-y-16 sm:space-y-24">
       {/* Header */}
       <div className="space-y-4 max-w-3xl">
         <div className="inline-flex items-center gap-2 text-xs font-bold text-[#D96846] tracking-widest uppercase">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Core Capabilities</span>
         </div>
-        <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-[#F5F2ED]">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-[#F5F2ED]">
           Agency Services
         </h1>
-        <p className="text-base sm:text-lg text-[#82818A] leading-relaxed">
+        <p className="text-sm sm:text-base md:text-lg text-[#82818A] leading-relaxed">
           Four dedicated creative verticals built to help brands, creators, and modern businesses turn digital attention into durable brand equity.
         </p>
       </div>
 
       {/* Services Deep Dive */}
-      <div className="space-y-16">
+      <div className="space-y-12 sm:space-y-16">
         {SERVICES.map((service, idx) => (
           <section
             key={service.id}
             id={service.slug}
-            className="p-8 sm:p-12 rounded-3xl bg-[#141419] border border-[#242430] hover:border-[#D96846]/40 transition-colors space-y-10"
+            className="p-6 sm:p-10 md:p-12 rounded-3xl bg-[#141419] border border-[#242430] hover:border-[#D96846]/40 transition-colors space-y-8 sm:space-y-10"
           >
             {/* Header / Number / Tagline */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-[#20202A] pb-8">

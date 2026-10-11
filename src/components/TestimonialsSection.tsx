@@ -16,17 +16,17 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="py-24 max-w-7xl mx-auto px-6 md:px-12 relative">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+    <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
         <div>
           <div className="inline-flex items-center gap-2 text-xs font-bold text-[#D96846] tracking-widest uppercase mb-3">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Verified Client Feedback</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-[#F5F2ED]">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-[#F5F2ED]">
             What Collaborators Say
           </h2>
-          <p className="mt-2 text-sm text-[#82818A] max-w-xl">
+          <p className="mt-2 text-xs sm:text-sm text-[#82818A] max-w-xl leading-relaxed">
             Genuine testimonials and feedback gathered from our team members&apos; client productions and long-term channel partnerships.
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function TestimonialsSection() {
             type="button"
             onClick={prev}
             aria-label="Previous testimonial"
-            className="p-3 rounded-full bg-[#141419] border border-[#2B2B38] hover:border-[#D96846] text-[#F5F2ED] hover:text-[#D96846] transition-colors"
+            className="p-3 rounded-full bg-[#141419] border border-[#2B2B38] hover:border-[#D96846] text-[#F5F2ED] hover:text-[#D96846] transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
@@ -45,7 +45,7 @@ export default function TestimonialsSection() {
             type="button"
             onClick={next}
             aria-label="Next testimonial"
-            className="p-3 rounded-full bg-[#141419] border border-[#2B2B38] hover:border-[#D96846] text-[#F5F2ED] hover:text-[#D96846] transition-colors"
+            className="p-3 rounded-full bg-[#141419] border border-[#2B2B38] hover:border-[#D96846] text-[#F5F2ED] hover:text-[#D96846] transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
@@ -53,17 +53,17 @@ export default function TestimonialsSection() {
       </div>
 
       {/* Featured Testimonial Banner */}
-      <div className="p-8 sm:p-12 md:p-16 rounded-3xl bg-[#141419] border border-[#2B2B38] relative overflow-hidden space-y-8 shadow-2xl">
+      <div className="p-6 sm:p-10 md:p-16 rounded-3xl bg-[#141419] border border-[#2B2B38] relative overflow-hidden space-y-6 sm:space-y-8 shadow-2xl">
         <div className="absolute top-6 right-8 text-[#D96846]/10 pointer-events-none">
-          <Quote className="w-24 h-24 rotate-180" />
+          <Quote className="w-20 h-20 sm:w-24 sm:h-24 rotate-180" />
         </div>
 
-        <div className="space-y-6 max-w-3xl relative z-10">
+        <div className="space-y-5 sm:space-y-6 max-w-3xl relative z-10">
           <div className="inline-flex items-center gap-2 text-xs font-bold px-3 py-1 rounded-full bg-[#D96846]/10 text-[#D96846] border border-[#D96846]/30 uppercase tracking-wider">
             <span>{TESTIMONIALS[currentIndex].category}</span>
           </div>
 
-          <p className="text-xl sm:text-2xl md:text-3xl font-medium text-[#F5F2ED] leading-relaxed italic">
+          <p className="text-base sm:text-xl md:text-2xl lg:text-3xl font-medium text-[#F5F2ED] leading-relaxed italic">
             &ldquo;{TESTIMONIALS[currentIndex].quote}&rdquo;
           </p>
 

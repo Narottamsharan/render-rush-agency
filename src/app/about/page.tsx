@@ -14,24 +14,24 @@ import {
 import { TEAM_MEMBERS } from "@/data/team";
 
 export const metadata: Metadata = {
-  title: "About the Agency & Creative Team",
+  title: "About Us",
   description:
     "Learn about Render Rush, our creative philosophy, and the three video editing & visual storytelling specialists powering our production studio.",
 };
 
 export default function AboutPage() {
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20 space-y-24">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:py-20 space-y-16 sm:space-y-24">
       {/* Editorial Header */}
-      <div className="space-y-6 max-w-3xl">
+      <div className="space-y-4 sm:space-y-6 max-w-3xl">
         <div className="inline-flex items-center gap-2 text-xs font-bold text-[#D96846] tracking-widest uppercase">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Agency Collective</span>
         </div>
-        <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-[#F5F2ED] leading-tight">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-[#F5F2ED] leading-tight">
           We Shape Visual Stories That Command Attention.
         </h1>
-        <p className="text-base sm:text-lg text-[#82818A] leading-relaxed">
+        <p className="text-sm sm:text-base md:text-lg text-[#82818A] leading-relaxed">
           Render Rush is a collaborative creative studio uniting specialized talent across short-form viral retention, long-form documentary filmmaking, and brand motion design.
         </p>
       </div>

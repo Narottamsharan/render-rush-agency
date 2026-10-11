@@ -31,12 +31,15 @@ export function generateMetadata({ params }: Props): Metadata {
     return { title: "Project Not Found" };
   }
   return {
-    title: `${project.title} | Case Study`,
+    title: {
+      absolute: `${project.title} | Render Rush`,
+    },
     description: project.description,
     openGraph: {
-      title: `${project.title} — Render Rush Production`,
+      title: `${project.title} | Render Rush`,
       description: project.description,
       images: [{ url: project.thumbnailUrl }],
+      url: `https://renderrush.in/work/${project.slug}`,
     },
   };
 }
@@ -54,7 +57,7 @@ export default function ProjectDetailPage({ params }: Props) {
   ).slice(0, 3);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20 space-y-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:py-20 space-y-12 sm:space-y-16">
       {/* Top Back Navigation */}
       <div>
         <Link
@@ -79,7 +82,7 @@ export default function ProjectDetailPage({ params }: Props) {
           )}
         </div>
 
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-[#F5F2ED] leading-tight">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#F5F2ED] leading-tight break-words">
           {project.title}
         </h1>
 
